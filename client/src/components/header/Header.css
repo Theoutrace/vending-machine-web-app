@@ -1,0 +1,15 @@
+.Header-outer-cls-container {
+  background-color: rgb(28, 30, 30);
+  position: sticky;
+  width: 100%;
+  top: 0px;
+  margin: 0px;
+  padding: 10px;
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  color: white;
+  justify-content: left;
+  align-items: center;
+  padding-left: 50px;
+}

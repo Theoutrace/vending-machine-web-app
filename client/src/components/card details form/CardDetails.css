@@ -1,0 +1,51 @@
+.CardDetails-cls-outer form {
+  background-color: rgb(0, 0, 0);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.CardDetails-cls-outer input {
+  height: 45px;
+  padding-left: 10px;
+  width: 400px;
+  border-radius: 10px;
+  border: 0;
+  background-color: aliceblue;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+.unauth-card-details-msg {
+  background-color: rgba(167, 0, 0, 0.113);
+  padding: 20px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: 200px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.unauth-card-details-msg h2 {
+  font-size: 35px;
+  font-weight: 400;
+  color: brown;
+  margin: 0;
+}
+
+.unauth-card-details-msg p {
+  margin: 5px;
+}

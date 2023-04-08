@@ -1,0 +1,10 @@
+.App {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  color: rgb(50, 46, 46);
+}

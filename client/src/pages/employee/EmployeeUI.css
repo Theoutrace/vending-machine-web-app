@@ -1,0 +1,12 @@
+.EmployeeUI-page-outer {
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emp-location-select-text-heading {
+  font-size: 35px;
+  font-weight: 400;
+}
