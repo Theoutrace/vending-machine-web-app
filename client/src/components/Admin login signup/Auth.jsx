@@ -2,35 +2,42 @@ import { Box, Button } from "@mui/material";
 import React, { useRef, useState } from "react";
 import "./Auth.css";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { AdminActions } from "../../Store/reducers/admin-reducer";
+import { useNavigate } from "react-router-dom";
 
 const Auth = () => {
+  const dispatch = useDispatch();
   const [loginForm, setLoginForm] = useState(false);
   const nameInpRef = useRef();
   const emailInpRef = useRef();
   const passInpRef = useRef();
+  const history = useNavigate();
 
   const authFormSubmitHandler = async (e) => {
     e.preventDefault();
 
     let endPoint = loginForm
-      ? "http://localhost:3000/admin/login"
-      : "http://localhost:3000/admin/register";
+      ? "http://localhost:3000/user/login"
+      : "http://localhost:3000/user/signup";
 
     const bodyObj = {
       name: !loginForm && nameInpRef.current.value,
       email: emailInpRef.current.value,
       password: passInpRef.current.value,
     };
-    const response = await axios.post(endPoint, bodyObj, {
-      headers: { "Content-Type": "application/json" },
-    });
-    console.log(response);
+    // const response = await axios.post(endPoint, bodyObj, {
+    //   headers: { "Content-Type": "application/json" },
+    // });
+    // console.log(response);
+    dispatch(AdminActions.adminLogin(true));
+    history("/admin");
   };
   return (
     <Box
       sx={{
         backgroundColor: "white",
-        padding: "20px",
+        padding: "40px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -40,7 +47,9 @@ const Auth = () => {
           "rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px",
       }}
     >
-      <h2>{!loginForm ? "Register" : "Login"}</h2>
+      <h2 className="cls-register-login-txt-above-frm">
+        {!loginForm ? "Register" : "Login"}
+      </h2>
       <form className="form-login-admin" onSubmit={authFormSubmitHandler}>
         {!loginForm && <input placeholder="Name" ref={nameInpRef} />}
         <input placeholder="Email" ref={emailInpRef} />
@@ -48,11 +57,10 @@ const Auth = () => {
         <Button
           sx={{
             width: "100%",
-            marginTop: "10px",
             border: "1px dashed grey",
             marginTop: "40px",
             "&:hover": {
-              backgroundColor: "blue",
+              backgroundColor: "rgb(53, 82, 211)",
               border: "1px solid blue",
               color: "white",
             },
