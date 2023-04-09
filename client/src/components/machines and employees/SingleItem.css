@@ -1,0 +1,20 @@
+.SingleItem-outer-dv-sn {
+  background-color: rgba(255, 255, 255, 0.808);
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  color: rgb(66, 61, 61);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.SingleItem-outer-dv-sn h2 {
+  margin: 5px;
+}
+
+.SingleItem-outer-dv-sn img {
+  cursor: pointer;
+}

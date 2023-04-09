@@ -4,6 +4,9 @@ const AdminSlice = createSlice({
   name: "admin",
   initialState: {
     adminLogin: false,
+    allEmployees: [],
+    getMachines: false,
+    getEmployees: false,
   },
   reducers: {
     adminLogin(state, action) {
@@ -11,6 +14,15 @@ const AdminSlice = createSlice({
     },
     adminLogout(state, action) {
       state.adminLogin = false;
+    },
+    addEmployees(state, action) {
+      state.adminLogin = action.payload;
+    },
+    getMachines(state) {
+      state.getMachines = !state.getMachines;
+    },
+    getEmployees(state) {
+      state.getEmployees = !state.getEmployees;
     },
   },
 });

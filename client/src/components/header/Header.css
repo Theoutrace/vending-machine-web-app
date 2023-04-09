@@ -1,6 +1,7 @@
 .Header-outer-cls-container {
   background-color: rgb(28, 30, 30);
   position: sticky;
+  z-index: 10;
   width: 100%;
   top: 0px;
   margin: 0px;
