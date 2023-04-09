@@ -1,8 +1,35 @@
 .SingleTransaction-outer-dv {
-  background-color: aliceblue;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
     rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 30px;
+  margin-right: 50px;
+  position: relative;
+}
+
+.SingleTransaction-outer-dv img {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+}
+
+.success-cls {
+  background-color: white;
+}
+
+.failed-cls {
+  background-color: rgba(255, 0, 0, 0.138);
+}
+
+.heading-cls {
+  background-color: black;
+  border-radius: 15px 15px 0px 0px;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
